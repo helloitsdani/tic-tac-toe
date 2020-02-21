@@ -43,5 +43,5 @@ export type GameMovesType = Record<PlayerId, BoardPosition[]>
 export interface GameStateType {
   players: PlayerType[]
   moves: GameMovesType
-  winner: PlayerMatchType
+  winner: PlayerMatchType | null
 }

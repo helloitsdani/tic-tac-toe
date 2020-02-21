@@ -1,5 +1,11 @@
-const board = (defaultState = {}, action: any) => {
-  return defaultState
-}
+import { combineReducers } from 'redux'
 
-export default board
+import moves from './moves'
+import players from './players'
+import winner from './winner'
+
+export default combineReducers({
+  moves,
+  players,
+  winner,
+})
