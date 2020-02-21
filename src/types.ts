@@ -40,8 +40,13 @@ export interface PlayerMatchType {
 
 export type GameMovesType = Record<PlayerId, BoardPosition[]>
 
+export interface GamePlayersType {
+  all: PlayerType[]
+  active: PlayerId
+}
+
 export interface GameStateType {
-  players: PlayerType[]
+  players: GamePlayersType
   moves: GameMovesType
   winner: PlayerMatchType | null
 }

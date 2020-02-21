@@ -1,6 +1,7 @@
-import { PlayerId } from '../../types'
+import { PlayerId, GamePlayersType } from '../../types'
+import { GameActions, CHANGE_PLAYER, RESET_GAME } from '../actions'
 
-const defaultState = [
+const defaultPlayers = [
   {
     piece: PlayerId.PLAYER_ONE,
     name: 'Player One',
@@ -11,7 +12,24 @@ const defaultState = [
   },
 ]
 
-const playersReducer = () => defaultState
+const defaultState = {
+  active: defaultPlayers[0].piece,
+  all: defaultPlayers,
+}
+
+const playersReducer = (state: GamePlayersType = defaultState, action: GameActions): GamePlayersType => {
+  switch (action.type) {
+    case CHANGE_PLAYER: 
+      return {
+        ...state,
+        active: action.payload,
+      }
+    case RESET_GAME:
+      return defaultState
+    default:
+      return state
+  }
+}
 
 export { defaultState }
 export default playersReducer

@@ -2,12 +2,13 @@ import { call, takeEvery, select, put } from 'redux-saga/effects'
 import { expectSaga } from 'redux-saga-test-plan'
 import * as matchers from 'redux-saga-test-plan/matchers';
 
-import { checkMovesForMatches } from './gameState'
-import { getMoves } from '../selectors'
+import { checkMovesForMatches, switchActivePlayer } from './gameState'
+import { getMoves, getPlayers } from '../selectors'
 import findMatch from '../../utils/findMatch'
 import { BoardPosition, PlayerId, MatchTuple } from '../../types'
 import { POSSIBLE_MATCHES } from '../../constants';
-import { winGame } from '../actions';
+import { winGame, changePlayer } from '../actions';
+import getNextPlayerId from '../../utils/getNextPlayerId';
 
 describe('gameState', () => {
   it('checks for matches when the saga is run', () => {
@@ -43,6 +44,27 @@ describe('gameState', () => {
       .select(getMoves)
       .call(findMatch, fakeMoves)
       .put(winGame(expectedWin))
+      .run()
+  })
+})
+
+describe('switchActivePlayer', () => {
+  it('changes the active player after every piece played', () => {
+    const fakePlayers = {
+      active: PlayerId.PLAYER_TWO,
+      all: [
+        { piece: PlayerId.PLAYER_ONE, name: 'Test Player One' },
+        { piece: PlayerId.PLAYER_TWO, name: 'Test Player Two' },
+      ]
+    }
+
+    return expectSaga(switchActivePlayer)
+      .provide([
+        [matchers.select.selector(getPlayers), fakePlayers]
+      ])
+      .select(getPlayers)
+      .call(getNextPlayerId, fakePlayers.active, fakePlayers.all)
+      .put(changePlayer(PlayerId.PLAYER_ONE))
       .run()
   })
 })
