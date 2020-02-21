@@ -1,51 +1,35 @@
-<testsuites name="jest tests" tests="26" failures="0" time="7.183999999999999">
-  <testsuite name="resetGame" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:01:42" time="1.321" tests="3">
-    <testcase classname="resetGame creates reset game action correctly" name="resetGame creates reset game action correctly" time="0.004">
+<testsuites name="jest tests" tests="26" failures="0" time="7.397">
+  <testsuite name="resetGame" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:06:38" time="1.534" tests="3">
+    <testcase classname="resetGame creates reset game action correctly" name="resetGame creates reset game action correctly" time="0.017">
     </testcase>
-    <testcase classname="placePiece creates place piece action correctly" name="placePiece creates place piece action correctly" time="0.001">
+    <testcase classname="placePiece creates place piece action correctly" name="placePiece creates place piece action correctly" time="0">
     </testcase>
     <testcase classname="winGame creates win game action correctly" name="winGame creates win game action correctly" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="movesReducer" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:01:43" time="0.217" tests="3">
-    <testcase classname="movesReducer returns the current state in response to an unknown action" name="movesReducer returns the current state in response to an unknown action" time="0">
-    </testcase>
-    <testcase classname="movesReducer responds to game reset action with the default state" name="movesReducer responds to game reset action with the default state" time="0.001">
-    </testcase>
-    <testcase classname="movesReducer updates the current state in response to a place piece action" name="movesReducer updates the current state in response to a place piece action" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:01:42" time="1.645" tests="1">
-    <testcase classname=" renders without crashing" name=" renders without crashing" time="0.073">
-    </testcase>
-  </testsuite>
-  <testsuite name="isSpaceOccupied" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:01:43" time="0.318" tests="4">
-    <testcase classname="isSpaceOccupied returns true when the specified space is occupied in the provided game" name="isSpaceOccupied returns true when the specified space is occupied in the provided game" time="0.001">
-    </testcase>
-    <testcase classname="isSpaceOccupied returns false when the specified space is free" name="isSpaceOccupied returns false when the specified space is free" time="0">
-    </testcase>
-    <testcase classname="isValidMove returns true when the specified space is empty in the provided game" name="isValidMove returns true when the specified space is empty in the provided game" time="0.001">
-    </testcase>
-    <testcase classname="isValidMove returns false when the specified space is occupied" name="isValidMove returns false when the specified space is occupied" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="players reducer" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:01:44" time="0.299" tests="1">
-    <testcase classname="players reducer returns the default state when called" name="players reducer returns the default state when called" time="0.002">
-    </testcase>
-  </testsuite>
-  <testsuite name="getMoves" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:01:44" time="0.249" tests="1">
-    <testcase classname="getMoves returns current moves from the state" name="getMoves returns current moves from the state" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="winner reducer" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:01:44" time="0.335" tests="3">
-    <testcase classname="winner reducer responds to unknown actions with the current state" name="winner reducer responds to unknown actions with the current state" time="0.002">
+  <testsuite name="winner reducer" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:06:40" time="0.272" tests="3">
+    <testcase classname="winner reducer responds to unknown actions with the current state" name="winner reducer responds to unknown actions with the current state" time="0.003">
     </testcase>
     <testcase classname="winner reducer responds to game reset action with the default state" name="winner reducer responds to game reset action with the default state" time="0">
     </testcase>
     <testcase classname="winner reducer updates the current state in response to a game win action" name="winner reducer updates the current state in response to a game win action" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="isMatchInMoves" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:01:44" time="0.269" tests="8">
+  <testsuite name="gameState" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:06:39" time="1.421" tests="2">
+    <testcase classname="gameState checks for matches when the saga is run" name="gameState checks for matches when the saga is run" time="0.019">
+    </testcase>
+    <testcase classname="gameState dispatches win game event if a match is found" name="gameState dispatches win game event if a match is found" time="0.012">
+    </testcase>
+  </testsuite>
+  <testsuite name="players reducer" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:06:40" time="0.242" tests="1">
+    <testcase classname="players reducer returns the default state when called" name="players reducer returns the default state when called" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:06:39" time="1.868" tests="1">
+    <testcase classname=" renders without crashing" name=" renders without crashing" time="0.059">
+    </testcase>
+  </testsuite>
+  <testsuite name="isMatchInMoves" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:06:40" time="0.305" tests="8">
     <testcase classname="isMatchInMoves returns true if all match positions are in the provided move positions" name="isMatchInMoves returns true if all match positions are in the provided move positions" time="0.001">
     </testcase>
     <testcase classname="isMatchInMoves returns false if not all match positions can be found" name="isMatchInMoves returns false if not all match positions can be found" time="0">
@@ -56,17 +40,33 @@
     </testcase>
     <testcase classname="findMatchInMoves only returns details of the first found match" name="findMatchInMoves only returns details of the first found match" time="0.001">
     </testcase>
-    <testcase classname="findMatch returns a match if one can be found" name="findMatch returns a match if one can be found" time="0">
+    <testcase classname="findMatch returns a match if one can be found" name="findMatch returns a match if one can be found" time="0.001">
     </testcase>
-    <testcase classname="findMatch can return a match for any player" name="findMatch can return a match for any player" time="0.001">
+    <testcase classname="findMatch can return a match for any player" name="findMatch can return a match for any player" time="0">
     </testcase>
     <testcase classname="findMatch returns undefined if no match can be found" name="findMatch returns undefined if no match can be found" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="gameState" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:01:42" time="2.531" tests="2">
-    <testcase classname="gameState checks for matches when the saga is run" name="gameState checks for matches when the saga is run" time="0.018">
+  <testsuite name="getMoves" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:06:40" time="0.268" tests="1">
+    <testcase classname="getMoves returns current moves from the state" name="getMoves returns current moves from the state" time="0.001">
     </testcase>
-    <testcase classname="gameState dispatches win game event if a match is found" name="gameState dispatches win game event if a match is found" time="0.002">
+  </testsuite>
+  <testsuite name="movesReducer" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:06:41" time="0.293" tests="3">
+    <testcase classname="movesReducer returns the current state in response to an unknown action" name="movesReducer returns the current state in response to an unknown action" time="0.001">
+    </testcase>
+    <testcase classname="movesReducer responds to game reset action with the default state" name="movesReducer responds to game reset action with the default state" time="0">
+    </testcase>
+    <testcase classname="movesReducer updates the current state in response to a place piece action" name="movesReducer updates the current state in response to a place piece action" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="isSpaceOccupied" errors="0" failures="0" skipped="0" timestamp="2020-02-21T20:06:40" time="1.194" tests="4">
+    <testcase classname="isSpaceOccupied returns true when the specified space is occupied in the provided game" name="isSpaceOccupied returns true when the specified space is occupied in the provided game" time="0.001">
+    </testcase>
+    <testcase classname="isSpaceOccupied returns false when the specified space is free" name="isSpaceOccupied returns false when the specified space is free" time="0">
+    </testcase>
+    <testcase classname="isValidMove returns true when the specified space is empty in the provided game" name="isValidMove returns true when the specified space is empty in the provided game" time="0">
+    </testcase>
+    <testcase classname="isValidMove returns false when the specified space is occupied" name="isValidMove returns false when the specified space is occupied" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>
