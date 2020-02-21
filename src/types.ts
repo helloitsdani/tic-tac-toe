@@ -10,7 +10,7 @@ export enum BoardPosition {
   BOTTOM_RIGHT,
 }
 
-export enum PlayerPiece {
+export enum PlayerId {
   PLAYER_ONE = 'PLAYER_ONE',
   PLAYER_TWO = 'PLAYER_TWO',
 }
@@ -27,7 +27,7 @@ export enum MatchName {
 }
 
 export interface PlayerType {
-  piece: PlayerPiece
+  piece: PlayerId
   name: string
 }
 
@@ -35,10 +35,10 @@ export type MatchTuple = [MatchName, BoardPosition[]]
 
 export interface PlayerMatchType {
   match: MatchTuple
-  piece: PlayerPiece
+  player: PlayerId
 }
 
-export type GameMovesType = Record<PlayerPiece, BoardPosition[]>
+export type GameMovesType = Record<PlayerId, BoardPosition[]>
 
 export interface GameStateType {
   players: PlayerType[]

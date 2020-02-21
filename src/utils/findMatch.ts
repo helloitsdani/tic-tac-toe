@@ -1,6 +1,5 @@
 import { POSSIBLE_MATCHES } from '../constants'
-
-import { BoardPosition, GameMovesType, MatchTuple, PlayerPiece } from '../types'
+import { BoardPosition, GameMovesType, MatchTuple, PlayerId, PlayerMatchType } from '../types'
 
 const isMatchInMoves = (match: BoardPosition[], moves: BoardPosition[]) =>
   match.every(position => moves.includes(position))
@@ -8,11 +7,11 @@ const isMatchInMoves = (match: BoardPosition[], moves: BoardPosition[]) =>
 const findMatchInMoves = (moves: BoardPosition[]): MatchTuple | undefined =>
   Object.entries(POSSIBLE_MATCHES).find(([_, match]) => isMatchInMoves(match, moves)) as MatchTuple
 
-const findMatch = (moves: GameMovesType) =>
-  Object.keys(moves)
-    .map(player => ({
-      player,
-      match: findMatchInMoves(moves[player as PlayerPiece]),
+const findMatch = (game: GameMovesType): PlayerMatchType | undefined =>
+  Object.entries(game)
+    .map(([player, moves]) => ({
+      player: player as PlayerId,
+      match: findMatchInMoves(moves)!,
     }))
     .find(player => player.match !== undefined)
 
