@@ -1,8 +1,9 @@
 import { call, takeEvery, select, put } from 'redux-saga/effects'
-import { PLACE_PIECE, winGame, changePlayer } from '../actions'
-import { getMoves, getPlayers } from '../selectors'
 import findMatch from '../../utils/findMatch'
 import getNextPlayerId from '../../utils/getNextPlayerId'
+import { PLACE_PIECE, winGame, changePlayer, finishGame } from '../actions'
+import { getMoves, getPlayers } from '../selectors'
+import isBoardFull from '../../utils/isBoardFull'
 
 function* checkMovesForMatches() {
   const moves = yield select(getMoves)
@@ -10,13 +11,21 @@ function* checkMovesForMatches() {
 
   if (match) {
     yield put(winGame(match))
+    yield put(finishGame())
+    return
+  }
+
+  const boardFull = yield call(isBoardFull, moves)
+
+  if (boardFull) {
+    yield put(finishGame())
   }
 }
 
 function* switchActivePlayer() {
   const players = yield select(getPlayers)
   const nextPlayerId = yield call(getNextPlayerId, players.active, players.all)
-  
+
   yield put(changePlayer(nextPlayerId))
 }
 

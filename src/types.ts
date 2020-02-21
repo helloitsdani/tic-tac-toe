@@ -26,6 +26,11 @@ export enum MatchName {
   DIAGONAL_RIGHT_TO_LEFT = 'DIAGONAL_RIGHT_TO_LEFT',
 }
 
+export enum GameStatus {
+  PLAYING = 'PLAYING',
+  FINISHED = 'FINISHED'
+}
+
 export interface PlayerType {
   piece: PlayerId
   name: string
@@ -49,4 +54,5 @@ export interface GameStateType {
   players: GamePlayersType
   moves: GameMovesType
   winner: PlayerMatchType | null
+  status: GameStatus
 }

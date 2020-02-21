@@ -1,5 +1,5 @@
 import { getMoves, getPlayers } from './index'
-import { PlayerId, BoardPosition } from '../../types'
+import { PlayerId, BoardPosition, GameStatus } from '../../types'
 
 const mockState = {
   players: {
@@ -20,6 +20,7 @@ const mockState = {
     PLAYER_TWO: [BoardPosition.MIDDLE_CENTRE],
   },
   winner: null,
+  status: GameStatus.PLAYING,
 }
 
 describe('getPlayers', () => {

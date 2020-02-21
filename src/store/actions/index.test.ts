@@ -1,17 +1,7 @@
-import { resetGame, placePiece, winGame } from './index'
+import { resetGame, placePiece, winGame, FINISH_GAME, CHANGE_PLAYER, changePlayer, finishGame } from './index'
 import { RESET_GAME, PLACE_PIECE, WIN_GAME } from '.'
 import { BoardPosition, PlayerId, MatchTuple } from '../../types'
 import { POSSIBLE_MATCHES } from '../../constants'
-
-describe('resetGame', () => {
-  it('creates reset game action correctly', () => {
-    const expectedAction = {
-      type: RESET_GAME,
-    }
-
-    expect(resetGame()).toMatchObject(expectedAction)
-  })
-})
 
 describe('placePiece', () => {
   it('creates place piece action correctly', () => {
@@ -43,5 +33,36 @@ describe('winGame', () => {
     }
 
     expect(winGame(winningMatch)).toMatchObject(expectedAction)
+  })
+})
+
+describe('finishGame', () => {
+  it('creates finish game action correctly', () => {
+    const expectedAction = {
+      type: FINISH_GAME,
+    }
+
+    expect(finishGame()).toMatchObject(expectedAction)
+  })
+})
+
+describe('resetGame', () => {
+  it('creates reset game action correctly', () => {
+    const expectedAction = {
+      type: RESET_GAME,
+    }
+
+    expect(resetGame()).toMatchObject(expectedAction)
+  })
+})
+
+describe('changePlayer', () => {
+  it('creates change player action correctly', () => {
+    const expectedAction = {
+      type: CHANGE_PLAYER,
+      payload: PlayerId.PLAYER_ONE
+    }
+
+    expect(changePlayer(PlayerId.PLAYER_ONE)).toMatchObject(expectedAction)
   })
 })
