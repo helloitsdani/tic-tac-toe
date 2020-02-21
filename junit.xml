@@ -1,6 +1,24 @@
-<testsuites name="jest tests" tests="1" failures="0" time="0.703">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2020-02-20T19:54:15" time="0.703" tests="1">
-    <testcase classname=" renders without crashing" name=" renders without crashing" time="0.017">
+<testsuites name="jest tests" tests="9" failures="0" time="2.278">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2020-02-21T00:44:40" time="0.886" tests="1">
+    <testcase classname=" renders without crashing" name=" renders without crashing" time="0.021">
+    </testcase>
+  </testsuite>
+  <testsuite name="isMatchInMoves" errors="0" failures="0" skipped="0" timestamp="2020-02-21T00:44:40" time="1.392" tests="8">
+    <testcase classname="isMatchInMoves returns true if all match positions are in the provided move positions" name="isMatchInMoves returns true if all match positions are in the provided move positions" time="0.002">
+    </testcase>
+    <testcase classname="isMatchInMoves returns false if not all match positions can be found" name="isMatchInMoves returns false if not all match positions can be found" time="0.001">
+    </testcase>
+    <testcase classname="findMatchInMoves returns details of a match in the provided PlayerMoves set" name="findMatchInMoves returns details of a match in the provided PlayerMoves set" time="0.001">
+    </testcase>
+    <testcase classname="findMatchInMoves returns undefined if no matches can be found" name="findMatchInMoves returns undefined if no matches can be found" time="0">
+    </testcase>
+    <testcase classname="findMatchInMoves only returns details of the first found match" name="findMatchInMoves only returns details of the first found match" time="0.001">
+    </testcase>
+    <testcase classname="findMatch returns a match if one can be found" name="findMatch returns a match if one can be found" time="0">
+    </testcase>
+    <testcase classname="findMatch can return a match for any player" name="findMatch can return a match for any player" time="0.001">
+    </testcase>
+    <testcase classname="findMatch returns undefined if no match can be found" name="findMatch returns undefined if no match can be found" time="0">
     </testcase>
   </testsuite>
 </testsuites>
