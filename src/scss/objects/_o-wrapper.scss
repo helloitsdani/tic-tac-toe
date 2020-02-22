@@ -1,0 +1,11 @@
+.o-wrapper {
+  min-height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: center;
+}

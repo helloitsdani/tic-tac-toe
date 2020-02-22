@@ -22,7 +22,7 @@ const Status: FunctionComponent = () => {
         <TurnStatus />
       )}
 
-      <button onClick={onResetGame}>Reset game</button>
+      <button className="c-button" onClick={onResetGame}>Start new game!</button>
     </div>
   )
 }

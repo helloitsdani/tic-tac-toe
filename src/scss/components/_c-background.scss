@@ -1,0 +1,22 @@
+.c-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  
+  background: radial-gradient(ellipse at top, $colour-background-light, $colour-background-shade);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  transition: all 1s ease-in-out;
+}
+
+.c-background--player-one {
+  background: radial-gradient(ellipse at top, mix($colour-background-light, $colour-player-one), mix($colour-background-shade, $colour-player-one));
+}
+
+.c-background--player-two {
+  background: radial-gradient(ellipse at top, mix($colour-background-light, $colour-player-two), mix($colour-background-shade, $colour-player-two));
+}

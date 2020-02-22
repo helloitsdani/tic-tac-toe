@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react'
 
 const O: FunctionComponent = () => (
-  <span>O</span>
+  <span className="c-player-piece">O</span>
 )
 
 export default O

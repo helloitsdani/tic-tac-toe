@@ -7,7 +7,9 @@ import createStore from './store'
 
 const TicTacToe = () => (
   <Provider store={createStore()}>
+    <div className="c-background" />
     <div className="o-wrapper">
+      <h1>Tic-tac-toe!</h1>
       <Game />
     </div>
   </Provider>

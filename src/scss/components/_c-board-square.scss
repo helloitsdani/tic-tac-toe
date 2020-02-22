@@ -1,0 +1,11 @@
+.c-board-square {
+  appearance: none;
+  background: none;
+  border: none;
+  font: inherit;
+  font-size: 3.5em;
+}
+
+.c-board-square--highlighted {
+  background: rgba(255, 255, 255, 0.2);
+}

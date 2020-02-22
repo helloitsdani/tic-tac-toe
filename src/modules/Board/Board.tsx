@@ -33,7 +33,7 @@ const Board: FunctionComponent = () => {
   const boardPositions = useBoardPositions(moves)
 
   return (
-    <div>
+    <div className="c-game-board">
       {BOARD.map(position => (
         <BoardSquare key={position} onSelect={() => onPositionSelect(position)} player={boardPositions[position]} />
       ))}

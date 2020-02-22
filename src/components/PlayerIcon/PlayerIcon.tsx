@@ -14,7 +14,7 @@ const PlayerIcon: FunctionComponent<PlayerIconProps> = ({ player }) => {
     case PlayerId.PLAYER_TWO:
       return <O />
     default:
-      return <span />
+      return <span>&nbsp;</span>
   }
 }
 
