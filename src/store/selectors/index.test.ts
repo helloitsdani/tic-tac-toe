@@ -1,4 +1,4 @@
-import { getMoves, getPlayers } from './index'
+import { getMoves, getPlayers, getStatus, getWinner } from './index'
 import { PlayerId, BoardPosition, GameStatus } from '../../types'
 
 const mockState = {
@@ -32,5 +32,17 @@ describe('getPlayers', () => {
 describe('getMoves', () => {
   it('returns current moves from the state', () => {
     expect(getMoves(mockState)).toEqual(mockState.moves)
+  })
+})
+
+describe('getStatus', () => {
+  it('returns current game status from the state', () => {
+    expect(getStatus(mockState)).toEqual(mockState.status)
+  })
+})
+
+describe('getWinner', () => {
+  it('returns the winning match from the state', () => {
+    expect(getWinner(mockState)).toEqual(mockState.winner)
   })
 })

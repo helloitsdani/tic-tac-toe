@@ -1,16 +1,12 @@
-import React, { useCallback, FunctionComponent } from 'react'
-import { useDispatch } from 'react-redux'
-import Board from '../../components/Board'
-import { BoardPosition, PlayerId } from '../../types'
-import { placePiece } from '../../store/actions'
+import React, { FunctionComponent } from 'react'
+import Board from '../Board'
+import Status from '../Status'
 
-const Game: FunctionComponent = () => {
-  const dispatch = useDispatch()
-  const onPositionSelect = useCallback((position: BoardPosition) => {
-    dispatch(placePiece(PlayerId.PLAYER_ONE, position))
-  }, [dispatch])
-
-  return <Board onPositionSelect={onPositionSelect} />
-}
+const Game: FunctionComponent = () => (
+  <div>
+    <Board />
+    <Status />
+  </div>
+)
 
 export default Game

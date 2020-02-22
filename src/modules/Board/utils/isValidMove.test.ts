@@ -1,4 +1,4 @@
-import { BoardPosition } from "../types"
+import { BoardPosition } from "../../../types"
 import isValidMove, { isSpaceOccupied } from "./isValidMove"
 
 describe('isSpaceOccupied', () => {
