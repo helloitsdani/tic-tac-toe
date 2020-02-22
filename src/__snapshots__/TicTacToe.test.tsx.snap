@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TicTacToe renders 1`] = `
+<DocumentFragment>
+  <div
+    class="c-background"
+  />
+  <div
+    class="o-wrapper"
+  >
+    <div
+      class="o-game-column"
+    >
+      <h1>
+        Tic-tac-toe!
+      </h1>
+      <div
+        class="o-game-columns__ui"
+      >
+        <div
+          class="c-game-board"
+        >
+          <svg
+            class="c-game-board__grid"
+          >
+            board.svg
+          </svg>
+          <div
+            class="c-game-board__square"
+            data-testid="Board/Square"
+          >
+            <button
+              class="c-board-button"
+            >
+              <span>
+                 
+              </span>
+            </button>
+          </div>
+          <div
+            class="c-game-board__square"
+            data-testid="Board/Square"
+          >
+            <button
+              class="c-board-button"
+            >
+              <span>
+                 
+              </span>
+            </button>
+          </div>
+          <div
+            class="c-game-board__square"
+            data-testid="Board/Square"
+          >
+            <button
+              class="c-board-button"
+            >
+              <span>
+                 
+              </span>
+            </button>
+          </div>
+          <div
+            class="c-game-board__square"
+            data-testid="Board/Square"
+          >
+            <button
+              class="c-board-button"
+            >
+              <span>
+                 
+              </span>
+            </button>
+          </div>
+          <div
+            class="c-game-board__square"
+            data-testid="Board/Square"
+          >
+            <button
+              class="c-board-button"
+            >
+              <span>
+                 
+              </span>
+            </button>
+          </div>
+          <div
+            class="c-game-board__square"
+            data-testid="Board/Square"
+          >
+            <button
+              class="c-board-button"
+            >
+              <span>
+                 
+              </span>
+            </button>
+          </div>
+          <div
+            class="c-game-board__square"
+            data-testid="Board/Square"
+          >
+            <button
+              class="c-board-button"
+            >
+              <span>
+                 
+              </span>
+            </button>
+          </div>
+          <div
+            class="c-game-board__square"
+            data-testid="Board/Square"
+          >
+            <button
+              class="c-board-button"
+            >
+              <span>
+                 
+              </span>
+            </button>
+          </div>
+          <div
+            class="c-game-board__square"
+            data-testid="Board/Square"
+          >
+            <button
+              class="c-board-button"
+            >
+              <span>
+                 
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="o-game-columns__menu"
+      >
+        <div
+          class="u-push-bottom"
+          data-testid="Status/TurnStatus"
+        >
+          <div
+            data-testid="TurnStatus"
+          >
+            <span
+              data-testid="TurnStatus/Player"
+            >
+              Player One
+            </span>
+            's turn!
+          </div>
+        </div>
+        <nav>
+          <button
+            class="c-button"
+          >
+            Start new game!
+          </button>
+        </nav>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { Provider } from 'react-redux'
 
 import Game from './modules/Game'
 
 import createStore from './store'
+import Background from './components/Background'
 
-const TicTacToe = () => (
+const TicTacToe: FunctionComponent = () => (
   <Provider store={createStore()}>
-    <div className="c-background" />
+    <Background />
     <div className="o-wrapper">
-      <h1>Tic-tac-toe!</h1>
       <Game />
     </div>
   </Provider>

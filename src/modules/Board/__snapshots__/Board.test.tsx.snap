@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Board renders 1`] = `
+<DocumentFragment>
+  <div
+    class="c-game-board"
+  >
+    <svg
+      class="c-game-board__grid"
+    >
+      board.svg
+    </svg>
+    <div
+      class="c-game-board__square"
+      data-testid="Board/Square"
+    >
+      <button
+        class="c-board-button"
+      >
+        <span>
+           
+        </span>
+      </button>
+    </div>
+    <div
+      class="c-game-board__square"
+      data-testid="Board/Square"
+    >
+      <button
+        class="c-board-button"
+      >
+        <span>
+           
+        </span>
+      </button>
+    </div>
+    <div
+      class="c-game-board__square"
+      data-testid="Board/Square"
+    >
+      <button
+        class="c-board-button"
+      >
+        <span>
+           
+        </span>
+      </button>
+    </div>
+    <div
+      class="c-game-board__square"
+      data-testid="Board/Square"
+    >
+      <button
+        class="c-board-button"
+      >
+        <span>
+           
+        </span>
+      </button>
+    </div>
+    <div
+      class="c-game-board__square"
+      data-testid="Board/Square"
+    >
+      <button
+        class="c-board-button"
+      >
+        <span>
+           
+        </span>
+      </button>
+    </div>
+    <div
+      class="c-game-board__square"
+      data-testid="Board/Square"
+    >
+      <button
+        class="c-board-button"
+      >
+        <span>
+           
+        </span>
+      </button>
+    </div>
+    <div
+      class="c-game-board__square"
+      data-testid="Board/Square"
+    >
+      <button
+        class="c-board-button"
+      >
+        <span>
+           
+        </span>
+      </button>
+    </div>
+    <div
+      class="c-game-board__square"
+      data-testid="Board/Square"
+    >
+      <button
+        class="c-board-button"
+      >
+        <span>
+           
+        </span>
+      </button>
+    </div>
+    <div
+      class="c-game-board__square"
+      data-testid="Board/Square"
+    >
+      <button
+        class="c-board-button"
+      >
+        <span>
+           
+        </span>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

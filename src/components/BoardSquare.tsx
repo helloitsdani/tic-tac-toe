@@ -6,14 +6,12 @@ import PlayerIcon from './PlayerIcon'
 
 interface BoardSquareProps {
   player: PlayerId
-  matched?: boolean
   onSelect: () => void
 }
 
-const BoardSquare: FunctionComponent<BoardSquareProps> = ({ player, matched, onSelect }) => (
+const BoardSquare: FunctionComponent<BoardSquareProps> = ({ player, onSelect }) => (
   <button
-    className={classnames('c-board-square', {
-      'c-board-square--highlighted': matched,
+    className={classnames('c-board-button', {
       'u-player--player-one': player === PlayerId.PLAYER_ONE,
       'u-player--player-two': player === PlayerId.PLAYER_TWO,
     })}

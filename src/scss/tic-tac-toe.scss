@@ -1,13 +1,16 @@
 $colour-background-light: #00d2ff;
 $colour-background-shade: #3a7bd5;
-$colour-foreground: #fff;
+$colour-foreground: #EEFCFF;
 
 $colour-player-one: #FF00A8;
 $colour-player-two: #DEFF00;
 
+$game-square-size: 6em;
+
 @import 'base';
 
 @import 'objects/o-wrapper';
+@import 'objects/o-game-column';
 
 @import 'utilities/u-push-bottom';
 @import 'utilities/u-player';
@@ -15,5 +18,5 @@ $colour-player-two: #DEFF00;
 @import 'components/c-button';
 @import 'components/c-background';
 @import 'components/c-game-board';
-@import 'components/c-board-square';
+@import 'components/c-board-button';
 @import 'components/c-player-piece';

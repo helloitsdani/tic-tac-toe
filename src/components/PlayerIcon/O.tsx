@@ -1,7 +1,8 @@
 import React, { FunctionComponent } from 'react'
+import { ReactComponent as OIcon } from '../../assets/O.svg'
 
 const O: FunctionComponent = () => (
-  <span className="c-player-piece">O</span>
+  <OIcon title="O" className="c-player-piece" />
 )
 
 export default O

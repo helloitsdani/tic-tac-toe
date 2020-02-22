@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Status renders 1`] = `
+<DocumentFragment>
+  <div
+    class="u-push-bottom"
+    data-testid="Status/TurnStatus"
+  >
+    <div
+      data-testid="TurnStatus"
+    >
+      <span
+        data-testid="TurnStatus/Player"
+      >
+        Test Player One
+      </span>
+      's turn!
+    </div>
+  </div>
+  <nav>
+    <button
+      class="c-button"
+    >
+      Start new game!
+    </button>
+  </nav>
+</DocumentFragment>
+`;

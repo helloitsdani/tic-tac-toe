@@ -6,8 +6,8 @@ body {
   font-family: 'Fredoka One', sans-serif;
   font-size: 20px;
   line-height: 1.5;
-  color: #EEFCFF;
-  background: #00d2ff;
+  color: $colour-foreground;
+  background: $colour-background-light;
 }
 
 h1 {

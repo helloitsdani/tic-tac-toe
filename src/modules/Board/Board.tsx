@@ -1,41 +1,21 @@
-import React, { FunctionComponent, useCallback } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { BoardPosition, GameMovesType, GameStatus } from '../../types'
-import { placePiece } from '../../store/actions'
-import { getPlayers, getMoves, getStatus } from '../../store/selectors'
+import React, { FunctionComponent } from 'react'
 
-import { useBoardPositions } from './utils/getBoardPositionsFromMoves'
-import isValidMove from './utils/isValidMove'
 import { BOARD } from '../../constants'
 import BoardSquare from '../../components/BoardSquare'
+import BoardGrid from './BoardGrid'
+import useBoard from './utils/useBoard'
 
 const Board: FunctionComponent = () => {
-  const dispatch = useDispatch()
-  const { active: activePlayer } = useSelector(getPlayers)
-  const gameStatus = useSelector(getStatus)
-  const moves = useSelector(getMoves)
-
-  const onPositionSelect = useCallback(
-    (position: BoardPosition) => {
-      if (gameStatus !== GameStatus.PLAYING) {
-        return
-      }
-
-      if (!isValidMove(position, moves)) {
-        return
-      }
-
-      dispatch(placePiece(activePlayer, position))
-    },
-    [activePlayer, gameStatus, moves, dispatch]
-  )
-
-  const boardPositions = useBoardPositions(moves)
+  const [boardPositions, onPositionSelect] = useBoard()
 
   return (
     <div className="c-game-board">
+      <BoardGrid />
+
       {BOARD.map(position => (
-        <BoardSquare key={position} onSelect={() => onPositionSelect(position)} player={boardPositions[position]} />
+        <div key={position} className="c-game-board__square" data-testid="Board/Square">
+          <BoardSquare onSelect={() => onPositionSelect(position)} player={boardPositions[position]} />
+        </div>
       ))}
     </div>
   )

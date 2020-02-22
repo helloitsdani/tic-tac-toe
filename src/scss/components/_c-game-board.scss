@@ -1,4 +1,22 @@
 .c-game-board {
+  position: relative;
   display: grid;
+  margin: 0 auto;
   grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+}
+
+.c-game-board__square {
+  width: $game-square-size;
+  height: $game-square-size;
+}
+
+.c-game-board__grid {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  stroke: $colour-foreground;
 }

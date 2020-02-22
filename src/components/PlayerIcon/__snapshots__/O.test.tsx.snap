@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`O renders 1`] = `
+<DocumentFragment>
+  <svg
+    class="c-player-piece"
+    title="O"
+  >
+    O.svg
+  </svg>
+</DocumentFragment>
+`;

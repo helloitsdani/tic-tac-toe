@@ -1,7 +1,8 @@
 import React, { FunctionComponent } from 'react'
+import { ReactComponent as XIcon } from '../../assets/X.svg'
 
 const X: FunctionComponent = () => (
-  <span className="c-player-piece">X</span>
+  <XIcon title="X" className="c-player-piece" />
 )
 
 export default X

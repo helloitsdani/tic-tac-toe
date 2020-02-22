@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameResult renders 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="GameResult/Player"
+  >
+    <span
+      data-testid="GameResult/PlayerName"
+    >
+      Test Player One
+    </span>
+     wins!
+  </div>
+</DocumentFragment>
+`;

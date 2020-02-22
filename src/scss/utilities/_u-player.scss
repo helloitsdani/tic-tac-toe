@@ -1,9 +1,15 @@
 .u-player--player-one {
   color: $colour-player-one;
-  fill: $colour-player-one;
+
+  svg {
+    stroke: $colour-player-one;
+  }
 }
 
 .u-player--player-two {
   color: $colour-player-two;
-  fill: $colour-player-two;
+
+  svg {
+    stroke: $colour-player-two;
+  }
 }

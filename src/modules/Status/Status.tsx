@@ -15,15 +15,23 @@ const Status: FunctionComponent = () => {
   const gameStatus = useSelector(getStatus)
 
   return (
-    <div>
-      {gameStatus === GameStatus.FINISHED ?  (
-        <GameResult />
+    <>
+      {gameStatus === GameStatus.FINISHED ? (
+        <div data-testid="Status/GameResult" className="u-push-bottom">
+          <GameResult />
+        </div>
       ) : (
-        <TurnStatus />
+        <div data-testid="Status/TurnStatus" className="u-push-bottom">
+          <TurnStatus />
+        </div>
       )}
 
-      <button className="c-button" onClick={onResetGame}>Start new game!</button>
-    </div>
+      <nav>
+        <button className="c-button" onClick={onResetGame}>
+          Start new game!
+        </button>
+      </nav>
+    </>
   )
 }
 

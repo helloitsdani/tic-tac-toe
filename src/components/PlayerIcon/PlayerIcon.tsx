@@ -4,7 +4,8 @@ import X from './X'
 import O from './O'
 
 interface PlayerIconProps {
-  player: PlayerId
+  player?: PlayerId
+  className?: string
 }
 
 const PlayerIcon: FunctionComponent<PlayerIconProps> = ({ player }) => {

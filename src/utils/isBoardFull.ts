@@ -1,4 +1,4 @@
-import { GameMovesType, BoardPosition } from '../types'
+import { GameMovesType } from '../types'
 import { BOARD } from '../constants'
 
 const isBoardFull = (game: GameMovesType) => {

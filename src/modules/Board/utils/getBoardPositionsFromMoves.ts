@@ -22,7 +22,4 @@ const getBoardPositionsFromMoves = (moves: GameMovesType) =>
       {} as Record<BoardPosition, PlayerId>
     )
 
-const useBoardPositions = (moves: GameMovesType) => useMemo(() => getBoardPositionsFromMoves(moves), [moves])
-
-export { useBoardPositions }
 export default getBoardPositionsFromMoves
