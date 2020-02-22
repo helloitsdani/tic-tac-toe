@@ -11,7 +11,7 @@ describe('Game', () => {
         <Game />
       </Provider>
     )
-    
+
     expect(asFragment()).toMatchSnapshot()
   })
 })

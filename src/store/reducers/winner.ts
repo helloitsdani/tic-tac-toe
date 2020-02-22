@@ -3,10 +3,7 @@ import { GameActions, RESET_GAME, WIN_GAME } from '../actions'
 
 const defaultState = null
 
-const winnerReducer = (
-  state: PlayerMatchType | null = defaultState,
-  action: GameActions
-): PlayerMatchType | null => {
+const winnerReducer = (state: PlayerMatchType | null = defaultState, action: GameActions): PlayerMatchType | null => {
   switch (action.type) {
     case WIN_GAME:
       return action.payload

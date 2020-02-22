@@ -28,7 +28,7 @@ export enum MatchName {
 
 export enum GameStatus {
   PLAYING = 'PLAYING',
-  FINISHED = 'FINISHED'
+  FINISHED = 'FINISHED',
 }
 
 export interface PlayerType {

@@ -20,10 +20,10 @@ describe('BoardSquare', () => {
       player: PlayerId.PLAYER_ONE,
       onSelect: jest.fn(),
     }
-    
+
     const { getByRole } = render(<BoardSquare {...props} />)
     fireEvent.click(getByRole('button'))
-    
+
     expect(props.onSelect).toHaveBeenCalled()
   })
 })

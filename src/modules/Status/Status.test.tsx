@@ -19,7 +19,7 @@ describe('Status', () => {
       all: [
         { piece: PlayerId.PLAYER_ONE, name: 'Test Player One' },
         { piece: PlayerId.PLAYER_TWO, name: 'Test Player Two' },
-      ]
+      ],
     },
     status: GameStatus.PLAYING,
     winner: null,
@@ -50,7 +50,7 @@ describe('Status', () => {
         <Status />
       </Provider>
     )
-    
+
     expect(getByTestId('Status/TurnStatus')).not.toBeNull()
   })
 
@@ -65,7 +65,7 @@ describe('Status', () => {
         <Status />
       </Provider>
     )
-    
+
     expect(getByTestId('Status/GameResult')).not.toBeNull()
   })
 
@@ -79,7 +79,7 @@ describe('Status', () => {
       </Provider>
     )
     fireEvent.click(getByRole('button'))
-    
+
     expect(resetGameMock).toHaveBeenCalled()
   })
 })

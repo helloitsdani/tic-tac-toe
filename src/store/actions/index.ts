@@ -1,4 +1,4 @@
-import { PlayerId, BoardPosition, PlayerMatchType } from "../../types"
+import { PlayerId, BoardPosition, PlayerMatchType } from '../../types'
 
 export const PLACE_PIECE = 'game/PLACE_PIECE'
 export const WIN_GAME = 'game/WIN'
@@ -9,18 +9,18 @@ export const CHANGE_PLAYER = 'game/CHANGE_PLAYER'
 export interface PlacePieceAction {
   type: typeof PLACE_PIECE
   payload: {
-    player: PlayerId,
+    player: PlayerId
     position: BoardPosition
   }
 }
 
 export interface WinGameAction {
-  type: typeof WIN_GAME,
+  type: typeof WIN_GAME
   payload: PlayerMatchType
 }
 
 export interface FinishGameAction {
-  type: typeof FINISH_GAME,
+  type: typeof FINISH_GAME
 }
 
 export interface ResetGameAction {
@@ -28,7 +28,7 @@ export interface ResetGameAction {
 }
 
 export interface ChangePlayerAction {
-  type: typeof CHANGE_PLAYER,
+  type: typeof CHANGE_PLAYER
   payload: PlayerId
 }
 
@@ -38,8 +38,8 @@ export const placePiece = (player: PlayerId, position: BoardPosition): GameActio
   type: PLACE_PIECE,
   payload: {
     player,
-    position
-  }
+    position,
+  },
 })
 
 export const winGame = (winningMatch: PlayerMatchType): GameActions => ({
@@ -48,11 +48,11 @@ export const winGame = (winningMatch: PlayerMatchType): GameActions => ({
 })
 
 export const finishGame = (): GameActions => ({
-  type: FINISH_GAME
+  type: FINISH_GAME,
 })
 
 export const resetGame = (): GameActions => ({
-  type: RESET_GAME
+  type: RESET_GAME,
 })
 
 export const changePlayer = (newPlayer: PlayerId): GameActions => ({

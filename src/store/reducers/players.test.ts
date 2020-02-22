@@ -22,7 +22,7 @@ describe('players reducer', () => {
           piece: PlayerId.PLAYER_TWO,
           name: 'Test Player Two',
         },
-      ]
+      ],
     }
 
     expect(playersReducer(currentState, unknownAction)).toEqual(currentState)
@@ -42,7 +42,7 @@ describe('players reducer', () => {
           piece: PlayerId.PLAYER_TWO,
           name: 'Test Player Two',
         },
-      ]
+      ],
     }
 
     expect(playersReducer(currentState, resetAction)).toEqual(defaultState)
@@ -62,7 +62,7 @@ describe('players reducer', () => {
           piece: PlayerId.PLAYER_TWO,
           name: 'Test Player Two',
         },
-      ]
+      ],
     }
 
     const expectedState = {

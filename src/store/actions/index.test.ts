@@ -24,7 +24,7 @@ describe('winGame', () => {
   it('creates win game action correctly', () => {
     const winningMatch = {
       player: PlayerId.PLAYER_TWO,
-      match: ['TOP_ROW', POSSIBLE_MATCHES.TOP_ROW] as MatchTuple
+      match: ['TOP_ROW', POSSIBLE_MATCHES.TOP_ROW] as MatchTuple,
     }
 
     const expectedAction = {
@@ -60,7 +60,7 @@ describe('changePlayer', () => {
   it('creates change player action correctly', () => {
     const expectedAction = {
       type: CHANGE_PLAYER,
-      payload: PlayerId.PLAYER_ONE
+      payload: PlayerId.PLAYER_ONE,
     }
 
     expect(changePlayer(PlayerId.PLAYER_ONE)).toMatchObject(expectedAction)

@@ -19,7 +19,7 @@ const defaultState = {
 
 const playersReducer = (state: GamePlayersType = defaultState, action: GameActions): GamePlayersType => {
   switch (action.type) {
-    case CHANGE_PLAYER: 
+    case CHANGE_PLAYER:
       return {
         ...state,
         active: action.payload,

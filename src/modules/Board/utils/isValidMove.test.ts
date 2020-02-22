@@ -1,5 +1,5 @@
-import { BoardPosition } from "../../../types"
-import isValidMove, { isSpaceOccupied } from "./isValidMove"
+import { BoardPosition } from '../../../types'
+import isValidMove, { isSpaceOccupied } from './isValidMove'
 
 describe('isSpaceOccupied', () => {
   const game = {
@@ -8,15 +8,11 @@ describe('isSpaceOccupied', () => {
   }
 
   it('returns true when the specified space is occupied in the provided game', () => {
-    expect(
-      isSpaceOccupied(BoardPosition.MIDDLE_CENTRE, game)
-    ).toBe(true)
+    expect(isSpaceOccupied(BoardPosition.MIDDLE_CENTRE, game)).toBe(true)
   })
 
   it('returns false when the specified space is free', () => {
-    expect(
-      isSpaceOccupied(BoardPosition.BOTTOM_CENTRE, game)
-    ).toBe(false)
+    expect(isSpaceOccupied(BoardPosition.BOTTOM_CENTRE, game)).toBe(false)
   })
 })
 
@@ -27,14 +23,10 @@ describe('isValidMove', () => {
   }
 
   it('returns true when the specified space is empty in the provided game', () => {
-    expect(
-      isValidMove(BoardPosition.MIDDLE_CENTRE, game)
-    ).toBe(true)
+    expect(isValidMove(BoardPosition.MIDDLE_CENTRE, game)).toBe(true)
   })
 
   it('returns false when the specified space is occupied', () => {
-    expect(
-      isValidMove(BoardPosition.TOP_LEFT, game)
-    ).toBe(false)
+    expect(isValidMove(BoardPosition.TOP_LEFT, game)).toBe(false)
   })
 })

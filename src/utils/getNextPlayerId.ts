@@ -6,7 +6,7 @@ const getNextPlayerId = (current: PlayerId, all: PlayerType[]) => {
   if (currentIdx < 0) {
     return all[0].piece
   }
-  
+
   const nextIdx = (currentIdx + 1) % all.length
   return all[nextIdx].piece
 }

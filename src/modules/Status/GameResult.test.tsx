@@ -12,7 +12,7 @@ describe('GameResult', () => {
     all: [
       { piece: PlayerId.PLAYER_ONE, name: 'Test Player One' },
       { piece: PlayerId.PLAYER_TWO, name: 'Test Player Two' },
-    ]
+    ],
   }
 
   it('renders', () => {
@@ -43,7 +43,7 @@ describe('GameResult', () => {
         <GameResult />
       </Provider>
     )
-    
+
     expect(getByTestId('GameResult/Draw')).not.toBeNull()
   })
 
@@ -61,7 +61,7 @@ describe('GameResult', () => {
         <GameResult />
       </Provider>
     )
-    
+
     expect(getByText(testPlayers.all[0].name)).not.toBeNull()
   })
 
@@ -79,7 +79,7 @@ describe('GameResult', () => {
         <GameResult />
       </Provider>
     )
-    
+
     expect(getByText(testPlayers.all[1].name)).not.toBeNull()
   })
 })
