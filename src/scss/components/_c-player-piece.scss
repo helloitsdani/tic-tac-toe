@@ -7,10 +7,10 @@
   .line {
     stroke-dasharray: 500;
     stroke-dashoffset: -500;
-    animation: piece-appear 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    animation: piece-appear 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
   }
 
-  .line:nth-child(2) {
+  .line:nth-of-type(2) {
     animation-delay: 0.25s;
   }
 }

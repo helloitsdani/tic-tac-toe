@@ -2,6 +2,6 @@
   <style>
     .st0{fill:none;stroke-width:8;stroke-linecap:round;stroke-miterlimit:10}
   </style>
-  <line class="st0 line" x1="88.3" y1="88.1" x2="11.22" y2="11.02"/>
 	<line class="st0 line" x1="11.22" y1="88.1" x2="88.3" y2="11.02"/>
+  <line class="st0 line" x1="88.3" y1="88.1" x2="11.22" y2="11.02"/>
 </svg>
